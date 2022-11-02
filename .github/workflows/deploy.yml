@@ -1,3 +1,4 @@
+
 name: Deploy master
 on:
   push:
@@ -24,6 +25,5 @@ jobs:
         application_name: docker
         environment_name: docker-env
         region: us-east-1
-#        version_label: 123
         version_label: ${{ github.sha }}
         deployment_package: deploy.zip
